@@ -1,2 +1,2 @@
-# blog22212
+# blog220212
 Django start course, BSAC
