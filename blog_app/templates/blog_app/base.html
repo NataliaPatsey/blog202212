@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+      {% block title %}
+        page title
+      {% endblock %}
+    </title>
+</head>
+<body>
+        {% block pagename %}
+
+        {% endblock %}
+
+        {% block content %}
+
+        {% endblock %}
+    <div>
+        <A HREF="{% url 'page1' %}"> <b>link page 1 </b></A>
+    </div>
+    <div>
+        <A HREF="{% url 'page2' %}"> link page 2 </A>
+    </div>
+    <h2> links via def_page</h2>
+    <div>
+        <A HREF="{% url 'page' 1 %}"> link page 1 </A>
+    </div>
+    <div>
+        <A HREF="{% url 'page' 2 %}"> link page 2 </A>
+    </div>
+</body>
+</html>

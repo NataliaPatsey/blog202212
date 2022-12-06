@@ -1,0 +1,18 @@
+{% extends 'blog_app/base.html' %}
+
+{% block title %}
+        Index Page
+{% endblock %}
+
+
+{% block pagename %}
+    <h1>Index Page</h1>
+{% endblock %}
+
+{% block content %}
+
+    {% for el in all %}
+<li> <A HREF="{% url 'category_item' el.id  %}"> {{ el.short_name }} </A> </li>
+    {% endfor %}
+
+{%  endblock %}

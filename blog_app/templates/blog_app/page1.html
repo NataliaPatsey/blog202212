@@ -1,23 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Page1</title>
-</head>
-<body>
-    <h1>Page 1</h1>
-    <div>
-        <A HREF="{% url 'page1' %}"> <b>link page 1 </b></A>
-    </div>
-    <div>
-        <A HREF="{% url 'page2' %}"> link page 2 </A>
-    </div>
-    <h2> links via def_page</h2>
-    <div>
-        <A HREF="{% url 'page' 1 %}"> link page 1 </A>
-    </div>
-    <div>
-        <A HREF="{% url 'page' 2 %}"> link page 2 </A>
-    </div>
-</body>
-</html>
+{% extends 'blog_app/base.html' %}
+
+{% block title %}
+        page1
+{% endblock %}
+
+
+{% block pagename %}
+{{  data_list }}
+    <h1>PAGE {{ data_list.0 }} </h1>
+    <p>{{ data_list.1 }}</p>
+{% endblock %}
