@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 from blog_srv.key import *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -129,5 +130,13 @@ STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,STATIC_URL),
+]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, STATIC_URL)
+
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

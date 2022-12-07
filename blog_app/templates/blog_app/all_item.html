@@ -1,18 +1,18 @@
 {% extends 'blog_app/base.html' %}
 
 {% block title %}
-        {{ one.short_name }}
+        {{ one }}
 {% endblock %}
 
 
 {% block pagename %}
-    <h1> {{ one.short_name }} Page</h1>
+    <h1> {{ one }} Page</h1>
 {% endblock %}
 
 {% block content %}
 
     {% for el in data %}
-<li>  <a href="{% url 'one_item' el.id %}">{{ el }}</a> </li>
+        <li>  {{ el.title }} [{{ el.category.short_name }}]: ({{ el.len_text }} simbols) </li>
     {% endfor %}
 
 {%  endblock %}

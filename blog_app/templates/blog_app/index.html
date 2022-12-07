@@ -10,9 +10,16 @@
 {% endblock %}
 
 {% block content %}
+    {% if request.user.is_authenticated %}
+        <a href = "{% url 'my_item' %}">My articles</a><br>
+    {% endif %}
 
     {% for el in all %}
-<li> <A HREF="{% url 'category_item' el.id  %}"> {{ el.short_name }} </A> </li>
+        <li> <A HREF="{% url 'category_item' el.id  %}"> {{ el.short_name }} </A> </li>
+    {% endfor %}
+<hr>
+    {% for el in all %}
+        <li> <A HREF="{% url 'category_item_by_name' el.short_name  %}"> {{ el.short_name }} </A> </li>
     {% endfor %}
 
 {%  endblock %}

@@ -16,6 +16,16 @@ class Article(models.Model):
     date = models.DateField(default=datetime.date.today)
     summary = models.CharField(max_length=200)
     text = models.TextField(max_length=1000)
+    user = models.ForeignKey('auth.User', default=1, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='blog_app/img/', default='blog_app/img/default.png')
+
+    class Meta:
+        unique_together = ['category', 'title']
+        ordering = ["-title"]
 
     def __str__(self):
         return self.title
+
+    @property
+    def len_text(self):
+        return len(self.text)

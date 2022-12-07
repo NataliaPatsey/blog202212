@@ -1,0 +1,14 @@
+{% extends 'blog_app/base.html' %}
+
+{% block title %}
+        {{ item.title }}
+{% endblock %}
+
+
+{% block content %}
+    <h1> {{ item.title }}</h1>
+      <p><img src="{{ item.image.url }}"></p>
+      <p> {{ item.text }}</p>
+
+
+{%  endblock %}
