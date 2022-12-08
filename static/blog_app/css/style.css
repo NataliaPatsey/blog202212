@@ -1,14 +1,16 @@
 body {height: 100%; font-family: monospace;}
-.logo {height: 80px;   width: 100px;}
-div.title { width: 100%; background-color: #CFD8DC; padding: 30px; color:#455A64; font-size: 38px; box-sizing: border-box;}
-div.menu1 { width: 100%; background-color:#455A64; padding: 5px;color:#FFFFFF; box-sizing: border-box;}
-a.menu1,a.menu1:visited {color:#FFFFFF;}
-a.menu1:active {color:#FF5722}
-div.menu2 { border-width: 0px 0px 1px 0px; border-style:solid; width: 100%; background-color:#FFFFFF ; padding: 5px;color:#455A64; box-sizing: border-box;}
- a.menu1,a.menu1:visited {color:#FFFFFF;}
+    div.title { width: 100%; background-color: #CFD8DC; padding: 30px; color:#455A64; font-size: 38px; box-sizing: border-box;}
+    div.menu1 { width: 100%; background-color:#455A64; padding: 5px;color:#FFFFFF; box-sizing: border-box;}
+    a.menu1,a.menu1:visited {color:#FFFFFF;}
+    a.menu1:active {color:#FF5722}
+    div.menu2 { border-width: 0px 0px 1px 0px; border-style:solid; width: 100%; background-color:#FFFFFF ; padding: 5px;color:#455A64; box-sizing: border-box;}
+    a.menu1,a.menu1:visited {color:#FFFFFF;}
     a.menu1:active {color:#FF5722}
     a.menu2,a.menu2:visited {color:#455A64;}
     a.menu2:active {color:#FF5722}
 
     div.content {height: 80%;   width: 100%; background-color: #FFFFFF;}
     div.footer {height: 50px;  width: 100%; background-color:#455A64; text-align:  center; color:#FFFFFF; box-sizing: border-box;}
+    img.logo {  width:100px; height: 50px;}
+    img.article {  width:50px; height: 50px;}
+    .warning {color:#FF5722; font-size: 18px;}
