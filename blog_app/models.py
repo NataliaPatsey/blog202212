@@ -9,6 +9,10 @@ class Category(models.Model):
     def __str__(self):
         return self.short_name
 
+    @property
+    def count_item(self):
+        return Article.objects.filter(category=self).count()
+
 class Article(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=100,null=False, blank=False )
@@ -29,3 +33,11 @@ class Article(models.Model):
     @property
     def len_text(self):
         return len(self.text)
+
+
+class Favorite(models.Model):
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    user = models.ForeignKey('auth.User', default=1, on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = ['article', 'user']

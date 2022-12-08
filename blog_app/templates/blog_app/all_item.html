@@ -9,6 +9,12 @@
     <h1> {{ one }} Page</h1>
 {% endblock %}
 
+{% block menu2 %}
+    {% for el in menu2 %}
+        <a href="{% url 'category_item' el.id %}">{{ el.short_name  }}</a> [{{el.count_item }}] //
+    {% endfor %}
+{% endblock %}
+
 {% block content %}
 
     {% for el in data %}

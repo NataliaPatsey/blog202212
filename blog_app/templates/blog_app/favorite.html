@@ -1,7 +1,12 @@
 {% extends 'blog_app/base.html' %}
 
 {% block title %}
-        {{ item.title }}
+        Index Page
+{% endblock %}
+
+
+{% block pagename %}
+    <h1>Index Page</h1>
 {% endblock %}
 
 {% block menu2 %}
@@ -10,9 +15,10 @@
     {% endfor %}
 {% endblock %}
 
-
 {% block content %}
-    <h1> {{ item.title }}</h1>
-      <p><img src="{{ item.image.url }}"></p>
-      <p> {{ item.text }}</p>
+    {% for el in data %}
+        <li> <A HREF="{% url 'one_item' el.article.id  %}"> {{ el.article.title }}  </A>
+            [{{ el.article.category.short_name }}]</li>
+    {% endfor %}
+
 {%  endblock %}

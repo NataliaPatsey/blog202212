@@ -1,8 +1,9 @@
 {% extends 'blog_app/base.html' %}
 
 {% block title %}
-        {{ item.title }}
+        Add Article
 {% endblock %}
+
 
 {% block menu2 %}
     {% for el in menu2 %}
@@ -10,9 +11,10 @@
     {% endfor %}
 {% endblock %}
 
-
 {% block content %}
-    <h1> {{ item.title }}</h1>
-      <p><img src="{{ item.image.url }}"></p>
-      <p> {{ item.text }}</p>
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
 {%  endblock %}
