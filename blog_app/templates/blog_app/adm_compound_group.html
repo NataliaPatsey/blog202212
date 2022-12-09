@@ -1,0 +1,30 @@
+{% extends 'blog_app/base.html' %}
+
+{% block menu2 %}
+    <a href="{% url 'index' %}">View site</a>
+{% endblock %}
+
+{% block title %}
+    <h3>
+            Group manage: {{ group.name }}
+    </h3>
+{% endblock %}
+
+{% block content %}
+   <h4>Delete from {{ group.name }}</h4>
+  {% for user in user_dellst %}
+    <div>
+      <h2>{{ user.username }}</h2>
+      <p><a href="{% url 'adm_del_from_group' group.id user.id  %}">Del</a></p>
+    <hr>
+  </div>
+  {% endfor %}
+   <h4>Add to  {{ group.name }}</h4>
+  {% for user in user_addlst %}
+    <div>
+      <h2>{{ user.username }}</h2>
+      <p><a href="{% url 'adm_add_to_group' group.id user.id %}">Add</a></p>
+    <hr>
+  </div>
+  {% endfor %}
+{% endblock %}

@@ -12,5 +12,5 @@ body {height: 100%; font-family: monospace;}
     div.content {height: 80%;   width: 100%; background-color: #FFFFFF;}
     div.footer {height: 50px;  width: 100%; background-color:#455A64; text-align:  center; color:#FFFFFF; box-sizing: border-box;}
     img.logo {  width:100px; height: 50px;}
-    img.article {  width:50px; height: 50px;}
+    img.article {width:100px; height: 100px;}
     .warning {color:#FF5722; font-size: 18px;}

@@ -16,6 +16,13 @@
 {% endblock %}
 
 {% block content %}
+<p>It's your {{ visit }} visit here!</p>
+     <form method="post">
+         {{ form }}
+         {% csrf_token %}
+         <button type="submit">Search</button>
+     </form>
+
     {% for el in data %}
         <li> <A HREF="{% url 'one_item' el.id  %}"> {{ el.title }}  </A> [{{ el.category.short_name }}] </li>
     {% endfor %}

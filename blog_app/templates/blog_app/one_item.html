@@ -6,13 +6,13 @@
 
 {% block menu2 %}
     {% for el in menu2 %}
-        <a href="{% url 'category_item' el.id %}">{{ el.short_name  }}</a> [{{el.count_item }}] //
+        <a  href="{% url 'category_item' el.id %}">{{ el.short_name  }}</a> [{{el.count_item }}] //
     {% endfor %}
 {% endblock %}
 
 
 {% block content %}
     <h1> {{ item.title }}</h1>
-      <p><img src="{{ item.image.url }}"></p>
+      <p><img class="article" src="{{ item.image.url }}"></p>
       <p> {{ item.text }}</p>
 {%  endblock %}
